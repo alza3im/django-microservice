@@ -1,0 +1,27 @@
+version: '3.8'
+services:  
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 8000:8000
+    volumes: 
+    #Edit on changes in directory/docker app 
+      - .:/app  
+    depends_on: 
+      - db
+  db :
+    image: mysql:5.7.22
+    #Incase mysql stops, it would also stop our container so restarting is necessary
+    restart: always
+    environment: 
+      MYSQL_DATABASE: admin
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    volumes: 
+      - .dbdata:/var/lib/mysql
+    ports: 
+    #Not the same port to avoid conflict with mysql installtion
+      - 33066:3306
