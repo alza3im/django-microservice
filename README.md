@@ -1,6 +1,6 @@
 # Django Admin Microservice  
 
-This repository is represents the Adming Backend app of the project.
+This repository represents the Adming Backend app of the project.
 
 Prerequisites: 
 
