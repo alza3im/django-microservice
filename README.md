@@ -15,6 +15,12 @@ To run the project :
 
     $docker-compose build
     $docker-compose up
+ 
+To run db migrations :
+
+    $docker-compose up exec backend sh 
+    $python manage.py makemigrations
+    $python manage.py migrate
 
 Use Postman to call the following endpoints
     
@@ -22,5 +28,6 @@ Use Postman to call the following endpoints
     localhost:8000/api/products/<id>
     localhost:8000/api/user
     
-[Flask_app](https://github.com/alza3im/flask-microservice-experiment)
+Checkout the [Flask App](https://github.com/alza3im/flask-microservice-experiment)
+
 This project follows this [tutorial](https://www.youtube.com/watch?v=0iB5IPoTDts)
