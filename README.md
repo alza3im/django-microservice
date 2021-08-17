@@ -10,7 +10,7 @@ Prerequisites:
 
 1.Install Docker and docker-compose
 
-2.Make sure you create the databases (check the docker-compose file)
+2.Make sure you create the database admin (check the docker-compose file)
 
 To run the project :
 
